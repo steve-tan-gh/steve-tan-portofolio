@@ -40,6 +40,17 @@ const projects = [
     liveUrl: "https://asphatl-9.vercel.app/home.html",
     // Tidak ada videoUrl, jadi tombol tidak akan muncul
   },
+  {
+    id: 4,
+    title: "C/C++ Project",
+    description:
+      "Data Structures & OOP Projects",
+    technologies: ["C", "C++", "OOP", 'Java'],
+    image: "/C-Project.png",
+    githubUrl: "https://github.com/steve-tan-gh/C-Project.git",
+    // liveUrl: "https://asphatl-9.vercel.app/home.html",
+    // Tidak ada videoUrl, jadi tombol tidak akan muncul
+  },
 ]
 
 export function ProjectsSection() {

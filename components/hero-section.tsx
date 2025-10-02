@@ -1,7 +1,7 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { Github, Linkedin, Mail, ChevronDown } from "lucide-react"
+import { Github, Linkedin, Mail, ChevronDown, Download } from "lucide-react"
 import { useEffect, useState } from "react"
 
 export function HeroSection() {
@@ -69,6 +69,7 @@ export function HeroSection() {
 
           <div className="animate-fade-in-delay-4">
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
+              {/* Tombol View My Work */}
               <Button
                 onClick={() => scrollToSection("projects")}
                 size="lg"
@@ -76,11 +77,26 @@ export function HeroSection() {
               >
                 View My Work
               </Button>
+              
+              {/* Tombol Download CV */}
+              <Button
+                variant="outline"
+                size="lg"
+                className="border-primary/50 text-primary hover:bg-primary hover:text-primary-foreground px-8 py-3 rounded-full font-medium transition-all duration-300 hover:shadow-[0_0_15px_rgba(139,92,246,0.3)] hover:scale-105 bg-transparent"
+                asChild // Prop ini membuat Button merender child-nya (<a>) sebagai elemen utama
+              >
+                <a href="/Steve Febryanto Tan.pdf" download>
+                  <Download className="mr-2 h-4 w-4" />
+                  Download CV
+                </a>
+              </Button>
+
+              {/* Tombol Contact Me */}
               <Button
                 onClick={() => scrollToSection("contact")}
                 variant="outline"
                 size="lg"
-                className="border-primary/50 text-primary hover:bg-primary hover:text-primary-foreground px-8 py-3 rounded-full font-medium transition-all duration-300 hover:shadow-[0_0_15px_rgba(139,92,246,0.3)] hover:scale-105 bg-transparent"
+                className="cosmic-button bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/70 text-primary-foreground px-8 py-3 rounded-full font-medium transition-all duration-300 hover:shadow-[0_0_20px_rgba(139,92,246,0.5)] hover:scale-105"
               >
                 Contact Me
               </Button>
